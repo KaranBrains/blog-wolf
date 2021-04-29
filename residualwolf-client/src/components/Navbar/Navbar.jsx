@@ -25,7 +25,7 @@ function NavbarComponent() {
                 href="/"
                 className="font-demi font-17 px-3 navbar-item
                   text-primaryColor text-center">
-                HOME
+                Home
               </Nav.Link>
             </NavLink>
             <NavLink to="/blog-list" activeClassName="activeNav">
@@ -35,7 +35,7 @@ function NavbarComponent() {
                 className="font-demi font-17
                   px-3 navbar-item text-primaryColor text-center"
               >
-                BLOG
+                Blog
               </Nav.Link>
             </NavLink>
             <NavLink to="/create-blog" activeClassName="activeNav">
@@ -44,7 +44,7 @@ function NavbarComponent() {
                 className="font-demi font-17
                   px-3 navbar-item text-primaryColor text-center"
               >
-                ADD BLOG
+                Add Blog
               </Nav.Link>
             </NavLink>
             <NavLink to="/login" activeClassName="activeNav">
@@ -53,7 +53,7 @@ function NavbarComponent() {
                 className="font-demi font-17
                   px-3 navbar-item text-primaryColor text-center"
               >
-                LOGIN
+                Login
               </Nav.Link>
             </NavLink>
             <NavLink to="/signup" activeClassName="activeNav">
@@ -62,7 +62,7 @@ function NavbarComponent() {
                 className="font-demi font-17
                   px-3 navbar-item text-primaryColor text-center"
               >
-                SIGNUP
+                SignUp
               </Nav.Link>
             </NavLink>
           </Nav>

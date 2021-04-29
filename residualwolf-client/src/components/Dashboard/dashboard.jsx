@@ -1,9 +1,16 @@
-import React, { Fragment } from "react";
+import React from 'react'
+import Blogs from './Blogs/Blogs';
+import Category from './Category/Category';
+import './Dashboard.css'
+import Sidebar from './Sidebar/Sidebar';
+import User from './User/User';
 
-export default () => {
+function dashboard() {
   return (
-    <Fragment>
-      <h2>Dashboard</h2>
-    </Fragment>
-  );
-};
+    <div>
+       <Sidebar />
+    </div>
+  )
+}
+
+export default dashboard

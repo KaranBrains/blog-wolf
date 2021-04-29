@@ -11,12 +11,16 @@ import BlogForm from './components/Dashboard/blogForm';
 import State from './context/ResidualWolf/State';
 import Login from './components/Auth/Login/Login';
 import Signup from './components/Auth/Signup/Signup';
+import dashboard from "./components/Dashboard/dashboard";
+import Blogs from "./components/Dashboard/Blogs/Blogs";
+import Category from "./components/Dashboard/Category/Category";
+import User from "./components/Dashboard/User/User";
 
 const App = () => {
   return (
     <State>
       <Router>
-      <NavbarComponent />
+        {/* <NavbarComponent /> */}
         <Fragment>
           <div className="container-fluid">
             <Switch>
@@ -26,10 +30,14 @@ const App = () => {
               <Route exact path="/create-blog" component={BlogForm} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
+              <Route exact path="/dashboard" component={dashboard} />
+              <Route exact path="/dashboard/blogs" component={Blogs} />
+              <Route exact path="/dashboard/category" component={Category} />
+              <Route exact path="/dashboard/user" component={User} />
             </Switch>
           </div>
         </Fragment>
-        <Footer className="bg-secondaryColor" />
+        {/* <Footer className="bg-secondaryColor" /> */}
       </Router>
     </State>
   );

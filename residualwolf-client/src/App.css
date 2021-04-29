@@ -48,6 +48,10 @@ body {
   font-display: swap;
 }
 
+::placeholder{
+  font-family: Avenir-medium;
+}
+
 /* Font weight */
 .font-bold {
   margin: 0;
@@ -149,7 +153,9 @@ a:hover {
   margin: 10px 0px;
   letter-spacing: 20px;
 }
-
+.card{
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.158);
+}
 .blog-title {
   color: #10266b;
 }
