@@ -29,8 +29,8 @@ function dashboard() {
         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
       },
       stroke: {
-        curve: 'smooth',
-      }
+        curve: "smooth",
+      },
     },
     series: [
       {
@@ -45,28 +45,44 @@ function dashboard() {
       <Sidebar />
       <div className="conatiner my-5">
         <div className="row d-flex justify-content-center">
-          <div className="col-4 ml-2">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>Profile Visits</h2>
-              <Chart options={state1.options} series={state2.series} type="bar" />
+              <Chart
+                options={state1.options}
+                series={state2.series}
+                type="bar"
+              />
             </div>
           </div>
-          <div className="col-4 ml-2">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Users</h2>
-              <Chart options={state1.options} series={state2.series} type="line" />
+              <Chart
+                options={state1.options}
+                series={state2.series}
+                type="line"
+              />
             </div>
           </div>
-          <div className="col-4 ml-2">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Blogs</h2>
-              <Chart options={state1.options} series={state2.series} type="area" />
+              <Chart
+                options={state1.options}
+                series={state2.series}
+                type="area"
+              />
             </div>
           </div>
-          <div className="col-4 ml-2">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Comments</h2>
-              <Chart options={state1.options} series={state2.series} type="heatmap" />
+              <Chart
+                options={state1.options}
+                series={state2.series}
+                type="heatmap"
+              />
             </div>
           </div>
         </div>
