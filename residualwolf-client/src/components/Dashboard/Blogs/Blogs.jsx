@@ -2,6 +2,7 @@ import React, { useState }  from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Modal } from "react-bootstrap";
+import "../Dashboard.css";
 
 function Blogs() {
   const [showModal, setShowModal] = useState(false);
@@ -24,14 +25,12 @@ function Blogs() {
         <Modal className="mt-5" show={showModal} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>
-              <div className="font-bold ml-1">
-                Add a Blog
-              </div>
+              <div className="font-bold ml-1">Add a Blog</div>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <div className="w-100 h-100">
-          <form>
+            <div className="w-100 h-100">
+              <form>
                 <div className="form-group">
                   <input
                     name="title"
@@ -65,21 +64,23 @@ function Blogs() {
                   Add
                 </button>
               </form>
-          </div>
+            </div>
           </Modal.Body>
         </Modal>
       ) : (
         ""
       )}
-      <main className={classes.content}>        
+      <main className={classes.content}>
         <div class="container">
           <div className="row">
             <div className="col-lg-12 col-sm-12 col-12 col-md-12 d-flex justify-content-end">
-              <button class="btn btn-primary" onClick={handleShow}>Add a blog</button>
+              <button class="btn btn-primary" onClick={handleShow}>
+                Add a blog
+              </button>
             </div>
           </div>
           <div class="row mb-5 mt-3">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3 padding-left-mobile">
               <div class="card font-regular">
                 <img
                   src="https://source.unsplash.com/random/"
@@ -111,7 +112,7 @@ function Blogs() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3 padding-left-mobile">
               <div class="card font-regular">
                 <img
                   src="https://source.unsplash.com/random/"

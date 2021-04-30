@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import Chart from "react-apexcharts";
+import "./Dashboard.css";
 
 function dashboard() {
   const state1 = {
@@ -45,7 +46,7 @@ function dashboard() {
       <Sidebar />
       <div className="conatiner my-5">
         <div className="row d-flex justify-content-center">
-          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-lg-0 padding-left-mobile ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>Profile Visits</h2>
               <Chart
@@ -55,7 +56,7 @@ function dashboard() {
               />
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-lg-0 padding-left-mobile ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Users</h2>
               <Chart
@@ -65,7 +66,7 @@ function dashboard() {
               />
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-lg-0 padding-left-mobile ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Blogs</h2>
               <Chart
@@ -75,7 +76,7 @@ function dashboard() {
               />
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-lg-0 padding-left-mobile ml-2">
             <div className="chart-space mb-0 py-0">
               <h2>New Comments</h2>
               <Chart

@@ -69,7 +69,7 @@ function Category() {
             </div>
           </div>
           <div class="row mb-5 mt-3">
-          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3 padding-left-mobile">
               <div class="card font-regular">
                 <div class="card-body">
                   <h5 class="text-dark font-weight-bold mt-2">
@@ -86,7 +86,7 @@ function Category() {
             </div>
             </div>
             <div class="row mb-5 mt-3">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3 padding-left-mobile">
               <div class="card font-regular">
                 <div class="card-body">
                   <h5 class="text-dark font-weight-bold mt-2">

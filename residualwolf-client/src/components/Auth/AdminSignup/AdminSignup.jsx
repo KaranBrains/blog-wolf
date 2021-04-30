@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "../../Navbar/Navbar";
 import swal from "sweetalert";
 
-function Signup() {
+function AdminSignup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +14,7 @@ function Signup() {
     }
     axios
       .post(
-        "http://localhost:9701/users/signup",
+        "http://localhost:9701/users/admin/signup",
         { name, email, password },
         { headers: { "Content-Type": "application/json" } }
       )
@@ -36,13 +35,12 @@ function Signup() {
 
   return (
     <>
-      <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">
             <div>
               <h1 className="text-center font-bold text-black mb-4">
-                Welcome to Residual Wolf, Signup here...
+                Admin SignUp
               </h1>
               <form onSubmit={handleSubmit}>
                 <div className="input-group mt-4">
@@ -99,4 +97,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default AdminSignup;

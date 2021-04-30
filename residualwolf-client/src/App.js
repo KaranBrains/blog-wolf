@@ -11,6 +11,7 @@ import BlogForm from './components/Dashboard/blogForm';
 import State from './context/ResidualWolf/State';
 import Login from './components/Auth/Login/Login';
 import Signup from './components/Auth/Signup/Signup';
+import AdminSignup from "./components/Auth/AdminSignup/AdminSignup";
 import dashboard from "./components/Dashboard/dashboard";
 import Blogs from "./components/Dashboard/Blogs/Blogs";
 import Category from "./components/Dashboard/Category/Category";
@@ -30,6 +31,7 @@ const App = () => {
               <Route exact path="/create-blog" component={BlogForm} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
+              <Route exact path="/admin/signup" component={AdminSignup} />
               <Route exact path="/dashboard" component={dashboard} />
               <Route exact path="/dashboard/blogs" component={Blogs} />
               <Route exact path="/dashboard/category" component={Category} />

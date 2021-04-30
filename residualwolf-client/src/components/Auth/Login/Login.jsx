@@ -22,14 +22,13 @@ function Login() {
       .then((res) => {
         if (res.data.message) {
           return swal("", res.data.message, "error");
-        }
-        window.localStorage.setItem("token", res.data.token);
-        window.localStorage.setItem("auth", res.data.auth);
+        }        
+        window.localStorage.setItem("token", res.data.token);        
 
-        if (window.localStorage.getItem("auth") == "user") {
+        if (res.data.result.role == "user") {
           swal("", "You are Logged in", "success");
           window.location.href = "/";
-        } else if (window.localStorage.getItem("auth") == "admin") {
+        } else if (res.data.result.role == "admin") {
           swal("", "You are Logged in", "success");
           window.location.href = "/dashboard";
         }
