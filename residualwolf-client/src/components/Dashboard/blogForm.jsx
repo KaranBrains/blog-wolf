@@ -1,5 +1,7 @@
 import React, { Fragment, useState, useContext } from "react";
 import Constext from "../../context/ResidualWolf/Context";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default (props) => {
   const constext = useContext(Constext);
@@ -33,6 +35,7 @@ export default (props) => {
 
   return (
     <Fragment>
+      <Navbar />
       <div className="container-fluid">
 
       
@@ -87,6 +90,7 @@ export default (props) => {
         </div>
         </div>
       </div>
+      <Footer />
     </Fragment>
   );
 };

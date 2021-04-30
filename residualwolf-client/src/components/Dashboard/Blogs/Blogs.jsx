@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState }  from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Modal } from "react-bootstrap";
 
 function Blogs() {
+  const [showModal, setShowModal] = useState(false);
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
   const useStyles = makeStyles((theme) => ({
     root: {
       display: "flex",
@@ -16,11 +20,62 @@ function Blogs() {
   return (
     <div>
       <Sidebar />
+      {showModal ? (
+        <Modal className="mt-5" show={showModal} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <div className="font-bold ml-1">
+                Add a Blog
+              </div>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <div className="w-100 h-100">
+          <form>
+                <div className="form-group">
+                  <input
+                    name="title"
+                    type="text"
+                    className="form-control mt-3"
+                    id="exampleFormControlInput1"
+                    placeholder="Blog Name"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    name="file"
+                    type="text"
+                    className="form-control mt-3"
+                    id="exampleFormControlInput1"
+                    placeholder="Blog Image"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    name="title"
+                    className="form-control mt-3 mb-4"
+                    id="exampleFormControlInput1"
+                    placeholder="Category Description"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Add
+                </button>
+              </form>
+          </div>
+          </Modal.Body>
+        </Modal>
+      ) : (
+        ""
+      )}
       <main className={classes.content}>        
         <div class="container">
           <div className="row">
             <div className="col-lg-12 col-sm-12 col-12 col-md-12 d-flex justify-content-end">
-              <button class="btn btn-primary">Add a blog</button>
+              <button class="btn btn-primary" onClick={handleShow}>Add a blog</button>
             </div>
           </div>
           <div class="row mb-5 mt-3">
@@ -85,48 +140,6 @@ function Blogs() {
                   </p>
                   <button class="btn btn-primary">Edit</button>
                   <button class="btn btn-danger ml-3">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
-              <div className="card h-100">
-                <div className="card-body">
-                  <form>
-                    <div className="form-group">
-                      <label className="font-16 font-demi">Title</label>
-                      <input
-                        name="title"
-                        type="text"
-                        className="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder=""
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label className="font-16 font-demi">Thumbnail</label>
-                      <input
-                        name="thumbnail"
-                        type="file"
-                        className="form-control"
-                        id="exampleFormControlInput2"
-                        placeholder=""
-                        required
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label className="font-demi font-16">Content</label>
-                      <textarea
-                        name="description"
-                        class="form-control"
-                        id="exampleFormControlTextarea1"
-                        rows="3"
-                      ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                      Edit
-                    </button>
-                  </form>
                 </div>
               </div>
             </div>

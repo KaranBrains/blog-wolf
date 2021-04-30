@@ -9,7 +9,7 @@ function NavbarComponent() {
     <React.Fragment>
       <Navbar
         expand="lg"
-        className="nav-background  py-2 px-3"
+        className="nav-background  py-2 px-3 shadow-sm"
         sticky="top"
         collapseOnSelect={true}
         variant="light"
@@ -36,15 +36,6 @@ function NavbarComponent() {
                   px-3 navbar-item text-primaryColor text-center"
               >
                 Blog
-              </Nav.Link>
-            </NavLink>
-            <NavLink to="/create-blog" activeClassName="activeNav">
-              <Nav.Link
-                href="/create-blog"
-                className="font-demi font-17
-                  px-3 navbar-item text-primaryColor text-center"
-              >
-                Add Blog
               </Nav.Link>
             </NavLink>
             <NavLink to="/login" activeClassName="activeNav">

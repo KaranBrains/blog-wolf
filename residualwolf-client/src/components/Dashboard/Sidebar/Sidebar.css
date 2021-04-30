@@ -1,6 +1,5 @@
 .aside{
     width: 270px;
-    background-color: var(--primaryColor);
     position: fixed;
     height: 100%;
     left: 0;
@@ -11,6 +10,9 @@
     transition: all 0.3s ease;
     padding: 30px;
     z-index: 5;
+  }
+  .text-20{
+    font-size: 20px;
   }
   .aside .aside-inner{
     position: absolute;
@@ -141,5 +143,6 @@
     font-size: 13px;
     color: #7d7d7d;
   }
+  
   
   

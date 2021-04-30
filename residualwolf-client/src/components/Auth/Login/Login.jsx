@@ -1,10 +1,12 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import "./Login.css";
+import Navbar from "../../Navbar/Navbar";
 
 function Login() {
   return (
     <>
+    <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">
@@ -40,18 +42,18 @@ function Login() {
                   Forgot Password
                 </p>
                 </div>
-
+                <Link to="/dashboard">
                 <div className="text-center mt-5">
                   <button className="text-white bg-secondaryColor font-demi btn-blue">
                     Signin
                   </button>
                 </div>
+                </Link>
               </form>
             </div>
           </div>
         </div>
       </div>
-      
     </>
   );
 }

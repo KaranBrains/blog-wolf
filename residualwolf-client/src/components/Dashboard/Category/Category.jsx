@@ -1,174 +1,109 @@
-import React from "react";
-import { Accordion, Card } from "react-bootstrap";
+import React , { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Modal } from "react-bootstrap";
 
 function Category() {
+  const [showModal, setShowModal] = useState(false);
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      display: "flex",
+    },    
+    content: {
+      flexGrow: 1,
+      padding: theme.spacing(2),
+    },
+  }));
+  const classes = useStyles();
   return (
     <div>
       <Sidebar />
-      <div className="container">
-        <div className="row d-flex justify-content-center my-5">
-          <div className="col-lg-10 col-sm-12 col-md-12 col-12">
-            <div className="row">
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                <Accordion>
-                  <Accordion.Toggle as={Card.Header} eventKey="0">
-                    <div class="card font-regular">
-                      <img
-                        src="https://source.unsplash.com/random/"
-                        alt=""
-                        class="img-fluid card-img-top"
-                        style={{ height: "250px" }}
-                      />
-                      <div class="card-body">
-                        <div class="row mt-4">
-                          <div class="col-lg-5 col-md-5 col-sm-5 col-5">
-                            <div class="grey-colored-text-18">Jan 20, 2020</div>
-                          </div>
-                          <div class="col-lg-7 col-md-7 col-sm-7 col-7 d-flex justify-content-end">
-                            <div class="grey-colored-text-18">
-                              <i class="fa fa-comment-o"></i>{" "}
-                              22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-heart-o"></i> 112
-                            </div>
-                          </div>
-                        </div>
-                        <h5 class="text-dark font-weight-bold mt-2 font-demi">
-                          Keep it simple and beautiful, fun and functional
-                        </h5>
-                        <p class="font-regular">
-                          Best landing for your app showcase Follow other
-                          investors, discover companies to believe in.
-                        </p>
-                      </div>
-                    </div>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="0">
-                    <Card.Body>
-                      <table class="table font-regular">
-                        <thead>
-                          <tr className="font-bold">
-                            <th scope="col">S.No</th>
-                            <th scope="col">Blog Name</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Accordion>
+      {showModal ? (
+        <Modal className="mt-5" show={showModal} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <div className="font-bold ml-1">
+                Add a Category
               </div>
-
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                <Accordion>
-                  <Accordion.Toggle as={Card.Header} eventKey="1">
-                    <div class="card font-regular">
-                      <img
-                        src="https://source.unsplash.com/random/"
-                        alt=""
-                        class="img-fluid card-img-top"
-                        style={{ height: "250px" }}
-                      />
-                      <div class="card-body">
-                        <div class="row mt-4">
-                          <div class="col-lg-5 col-md-5 col-sm-5 col-5">
-                            <div class="grey-colored-text-18">Jan 20, 2020</div>
-                          </div>
-                          <div class="col-lg-7 col-md-7 col-sm-7 col-7 d-flex justify-content-end">
-                            <div class="grey-colored-text-18">
-                              <i class="fa fa-comment-o"></i>{" "}
-                              22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-heart-o"></i> 112
-                            </div>
-                          </div>
-                        </div>
-                        <h5 class="text-dark font-weight-bold mt-2 font-demi">
-                          Keep it simple and beautiful, fun and functional
-                        </h5>
-                        <p class="font-regular">
-                          Best landing for your app showcase Follow other
-                          investors, discover companies to believe in.
-                        </p>
-                      </div>
-                    </div>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="1">
-                    <Card.Body>
-                      <table class="table font-regular">
-                        <thead>
-                          <tr className="font-bold">
-                            <th scope="col">S.No</th>
-                            <th scope="col">Blog Name</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>
-                              <i class="fa fa-pencil" aria-hidden="true"></i>
-                              &nbsp;&nbsp;&nbsp;&nbsp;
-                              <i class="fa fa-trash" aria-hidden="true"></i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Accordion>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <div className="w-100 h-100">
+          <form>
+                <div className="form-group">
+                  <input
+                    name="title"
+                    type="text"
+                    className="form-control mt-3"
+                    id="exampleFormControlInput1"
+                    placeholder="Category Name"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    name="title"
+                    className="form-control mt-3 mb-4"
+                    id="exampleFormControlInput1"
+                    placeholder="Category Description"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Add
+                </button>
+              </form>
+          </div>
+          </Modal.Body>
+        </Modal>
+      ) : (
+        ""
+      )}
+      <main className={classes.content}>        
+        <div class="container">
+          <div className="row">
+            <div className="col-lg-12 col-sm-12 col-12 col-md-12 d-flex justify-content-end">
+              <button class="btn btn-primary" onClick={handleShow}>Add a Category</button>
+            </div>
+          </div>
+          <div class="row mb-5 mt-3">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+              <div class="card font-regular">
+                <div class="card-body">
+                  <h5 class="text-dark font-weight-bold mt-2">
+                    Category 1
+                  </h5>
+                  <p class="grey-colored-text-18">
+                    Best landing for your app showcase Follow other investors,
+                    discover companies to believe in.
+                  </p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger ml-3">Delete</button>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row mb-5 mt-3">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+              <div class="card font-regular">
+                <div class="card-body">
+                  <h5 class="text-dark font-weight-bold mt-2">
+                    Category 2
+                  </h5>
+                  <p class="grey-colored-text-18">
+                    Best landing for your app showcase Follow other investors,
+                    discover companies to believe in.
+                  </p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger ml-3">Delete</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

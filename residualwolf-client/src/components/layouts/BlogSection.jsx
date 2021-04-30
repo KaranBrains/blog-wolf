@@ -2,6 +2,8 @@ import React, { Fragment, useContext, useEffect } from "react";
 import Context from "../../context/ResidualWolf/Context";
 import Blog from "./Card";
 import Spinner from "./Spinner";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default () => {
   const context = useContext(Context);
@@ -12,6 +14,7 @@ export default () => {
   console.log(posts, "kill");
   return (
     <Fragment>
+      <Navbar />
       <section className="home">
         <div className="container-fluid pb-2 mt-5 mb-3">
           <div className="row mt-3">
@@ -37,6 +40,7 @@ export default () => {
           </div>
         </div>
       </section>
+      <Footer />
     </Fragment>
   );
 };

@@ -18,8 +18,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ViewListIcon from "@material-ui/icons/ViewList";
 import CategoryIcon from "@material-ui/icons/Category";
+import LogoutIcon from "@material-ui/icons/Category";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import { Link } from "react-router-dom";
+import './Sidebar.css';
 
 const drawerWidth = 240;
 
@@ -150,7 +152,9 @@ export default function MiniDrawer() {
         <List>
           <ListItem button>
             <ListItemIcon>
+            <Link to="/dashboard">
               <DashboardIcon />
+            </Link>
             </ListItemIcon>
             <Link to="/dashboard">
             <ListItemText primary="Dashboard" />
@@ -158,7 +162,9 @@ export default function MiniDrawer() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
+            <Link to="/dashboard/blogs">
               <ViewListIcon />
+            </Link>
             </ListItemIcon>
             <Link to="/dashboard/blogs">
             <ListItemText primary="Blogs" />
@@ -166,7 +172,9 @@ export default function MiniDrawer() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
+            <Link to="/dashboard/user">
               <AccountCircleIcon />
+            </Link>
             </ListItemIcon>
             <Link to="/dashboard/user">
               <ListItemText primary="User" />
@@ -174,10 +182,22 @@ export default function MiniDrawer() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
+            <Link to="/dashboard/category">
               <CategoryIcon />
+            </Link>
             </ListItemIcon>
             <Link to="/dashboard/category">
             <ListItemText primary="Categories" />
+            </Link>
+          </ListItem> 
+          <ListItem button>
+            <ListItemIcon>
+            <Link to="/logout">
+            <strong><i class="fas fa-sign-out-alt text-20"></i></strong>
+            </Link>
+            </ListItemIcon>
+            <Link to="/logout">
+            <ListItemText primary="Logout" />
             </Link>
           </ListItem>          
         </List>

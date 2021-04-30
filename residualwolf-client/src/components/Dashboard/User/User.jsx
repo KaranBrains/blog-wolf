@@ -1,36 +1,101 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import avatar from "../../../images/profile_avatar.png";
 
 function User() {
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      display: "flex",
+    },    
+    content: {
+      flexGrow: 1,
+      padding: theme.spacing(2),
+    },
+  }));
+  const classes = useStyles();
   return (
-    <>
+    <div>
       <Sidebar />
-      <div className="container">
-        <div className="row my-5 d-flex justify-content-center">
-          <div className="col-lg-6 col-sm-12 col-md-6 col-12">
-            <div className="card text-center py-4">
-              <div className="text-center my-3">
+      <main className={classes.content}>        
+        <div class="container">
+          <div class="row mb-5 mt-3">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+              <div class="card font-regular">
                 <img
-                  src="https://source.unsplash.com/random/400x400"
+                  src={avatar}
                   alt=""
-                  style={{}}
+                  className="img-fluid card-img-top ml-5"
                   style={{
-                    height: "400px",
-                    width: "400px",
+                    height: "250px",
+                    width: "250px",
                     borderRadius: "50%",
                   }}
                 />
+                <div class="card-body">
+                  <h5 class="text-dark font-weight-bold mt-2">
+                    Username : @Alpha _Beta
+                  </h5>
+                  <p class="grey-colored-text-18">
+                    Full Name : Alpha Beta
+                  </p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger ml-3">Delete</button>
+                </div>
               </div>
-              <h4 className="card-title font-bold">Username</h4>
-              <h6 className="card-subtitle mb-2 text-muted font-demi font-20">
-                @Shruti3004
-              </h6>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+              <div class="card font-regular">
+                <img
+                  src={avatar}
+                  alt=""
+                  className="img-fluid card-img-top ml-5"
+                  style={{
+                    height: "250px",
+                    width: "250px",
+                    borderRadius: "50%",
+                  }}
+                />
+                <div class="card-body">
+                  <h5 class="text-dark font-weight-bold mt-2">
+                    Username : @Alpha _Beta
+                  </h5>
+                  <p class="grey-colored-text-18">
+                    Full Name : Alpha Beta
+                  </p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger ml-3">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+              <div class="card font-regular">
+                <img
+                  src={avatar}
+                  alt=""
+                  className="img-fluid card-img-top ml-5"
+                  style={{
+                    height: "250px",
+                    width: "250px",
+                    borderRadius: "50%",
+                  }}
+                />
+                <div class="card-body">
+                  <h5 class="text-dark font-weight-bold mt-2">
+                    Username : @Alpha _Beta
+                  </h5>
+                  <p class="grey-colored-text-18">
+                    Full Name : Alpha Beta
+                  </p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger ml-3">Delete</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="col-lg-8 col-sm-8 col-md-12 col-12"></div>
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
 

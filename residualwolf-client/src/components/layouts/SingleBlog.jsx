@@ -2,6 +2,8 @@ import React, { Fragment, useContext, useEffect } from "react";
 import Context from "../../context/ResidualWolf/Context";
 import Spinner from "../layouts/Spinner";
 import { useParams } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default ({ location }) => {
   const id = location.search.split("=")[1];
@@ -12,9 +14,9 @@ export default ({ location }) => {
   useEffect(() => {
     getPost(id);
   }, [id]);
-  console.log(post, "post-detail");
   return (
     <Fragment>
+      <Navbar />
       {post !== null ? (
         <div className="container-fluid">
           <div className="row mt-3">
@@ -134,7 +136,6 @@ export default ({ location }) => {
               </div>
             </div>
             <div className="col-lg-4 addsense p-2">
-              hoo
             </div>
           </div>
 
@@ -148,6 +149,7 @@ export default ({ location }) => {
       ) : (
         <Spinner />
       )}
+      <Footer />
     </Fragment>
   );
 };
