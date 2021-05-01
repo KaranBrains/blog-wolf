@@ -9,7 +9,7 @@ function NavbarComponent() {
   return (
     <React.Fragment>
       <Navbar
-        expand="lg"
+        expand="md"
         className="nav-background  py-2 px-3 shadow-sm"
         sticky="top"
         collapseOnSelect={true}
@@ -26,7 +26,7 @@ function NavbarComponent() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="links">
+          <Nav className="links ml-auto">
             <NavLink exact to="/" activeClassName="activeNav">
               <Nav.Link
                 href="/"
@@ -102,18 +102,16 @@ function NavbarComponent() {
                 SignUp
               </Nav.Link>
             </NavLink>
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+              ></input>
+              <i className="fa fa-search mt-3 ml-2 text-primaryColor"></i>
+            </div>
           </Nav>
         </Navbar.Collapse>
-        <nav className="ml-auto">
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search"
-            ></input>
-            <i className="fa fa-search mt-3 ml-2 text-primaryColor"></i>
-          </div>
-        </nav>
       </Navbar>
     </React.Fragment>
   );

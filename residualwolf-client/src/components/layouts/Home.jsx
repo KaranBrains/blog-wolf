@@ -4,6 +4,7 @@ import Blog from "./CardNew";
 import Spinner from "./Spinner";
 import Footer from "../Footer/Footer";
 import HomeNavbar from "../HomeNavbar/HomeNavbar";
+import Carousel from "react-bootstrap/Carousel";
 
 export default () => {
   const context = useContext(Context);
@@ -45,6 +46,7 @@ export default () => {
           </div>
         </section>
       </div>
+
       <Footer />
     </Fragment>
   );

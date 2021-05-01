@@ -11,6 +11,7 @@
 
 .nav-left-sidebar .navbar-nav {
   width: 100%;
+  margin-top: 140px;
 }
 
 .nav-left-sidebar .navbar {
@@ -33,6 +34,12 @@
   line-height: 16px;
 }
 
+.nav-divider {
+  padding: 10px 14px;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 18px;  
+}
 
 .nav-left-sidebar .navbar-nav .nav-link:focus,
 .nav-left-sidebar .navbar-nav .nav-link.active {
@@ -89,45 +96,3 @@
     display: none;
   }
 }
-/* @media only screen and (max-width: 768px) {
-  .nav-left-sidebar .navbar a {
-    color: #fff;
-    font-size: 18px;
-  }
-  .nav-left-sidebar .navbar {
-    padding: 14px;
-  }
-  .nav-left-sidebar {
-    width: 100%;
-    position: relative;
-    top: 0px;
-    right: 0px;
-  }
-  .nav-left-sidebar .navbar-toggler {
-    background-color: #fff;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .nav-left-sidebar .navbar a {
-    color: #fff;
-  }
-  .nav-left-sidebar .navbar-toggler {
-    background-color: #fff;
-  }
-  .aside-header .navbar-toggle {
-    display: block;
-  }
-  .nav-left-sidebar .navbar {
-    padding: 14px;
-  }
-  .nav-left-sidebar {
-    width: 100%;
-    position: relative;
-    top: 0px;
-    right: 0px;
-  }
-  .nav-left-sidebar .navbar-toggler {
-    background-color: #fff;
-  }
-} */

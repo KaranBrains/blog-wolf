@@ -20,6 +20,7 @@ function NavbarComponent() {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav flex-column">
+                <li class="nav-divider text-primaryColor">Categories</li>
                 <li class="nav-item ">
                   <a class="nav-link active" href="#">
                     <i class="fa fa-fw fa-user-circle"></i>Personal Blog
