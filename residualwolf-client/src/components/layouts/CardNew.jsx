@@ -11,9 +11,13 @@ export default (props) => {
       <div className="col-md-4 mt-2" key={post._id}>
         <div className="card-deck-wrapper">
           <div className="card-deck">
-            <div className="card mb-4">
+            <div className="card mb-4 font-regular">
               <div className="card-body">
-                <h5 className="blog-title card-title mt-0">{post.title.length >30 ? post.title.substring(0,30) + "..." : post.title }</h5>
+                <h5 className="blog-title card-title mt-0 font-demi">
+                  {post.title.length > 30
+                    ? post.title.substring(0, 30) + "..."
+                    : post.title}
+                </h5>
                 <img
                   className="blog-img-2 card-img-top img-fluid"
                   src={post.imageUrl}
@@ -24,7 +28,7 @@ export default (props) => {
                 <div className="col-md-12">
                   <a
                     href={`/blog-details?id=${post._id}`}
-                    className="btn btn-sm text-center btn-outline-primary ml-1"
+                    className="btn btn-sm text-center bg-primaryColor text-white ml-1"
                   >
                     View More
                   </a>
