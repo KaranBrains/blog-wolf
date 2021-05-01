@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useContext } from "react";
 import Constext from "../../context/ResidualWolf/Context";
-import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import NavbarComponent from "../HomeNavbar/Navbar/Navbar";
 
 export default (props) => {
   const constext = useContext(Constext);
@@ -35,59 +35,59 @@ export default (props) => {
 
   return (
     <Fragment>
-      <Navbar />
+      <NavbarComponent />
       <div className="container-fluid">
-
-      
-      <div className="row">
-        <div className="col-12">
-          <div className="card">
-            <div className="card-body">
-              <form onSubmit={onSubmit}>
-                <div className="form-group">
-                  <label  className="font-20 font-bold">Title</label>
-                  <input
-                    onChange={onChange}
-                    name="title"
-                    value={title}
-                    type="text"
-                    className="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder=""
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label  className="font-20 font-bold">Thumbnail</label>
-                  <input
-                    onChange={onChange1}
-                    name="thumbnail"
-                    value={thumbnail}
-                    type="file"
-                    className="form-control"
-                    id="exampleFormControlInput2"
-                    placeholder=""
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1 font-bold">Content</label>
-                  <textarea
-                    onChange={onChange}
-                    name="description"
-                    value={description}
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  Add
-                </button>
-              </form>
+        <div className="row">
+          <div className="col-12">
+            <div className="card">
+              <div className="card-body">
+                <form onSubmit={onSubmit}>
+                  <div className="form-group">
+                    <label className="font-20 font-bold">Title</label>
+                    <input
+                      onChange={onChange}
+                      name="title"
+                      value={title}
+                      type="text"
+                      className="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label className="font-20 font-bold">Thumbnail</label>
+                    <input
+                      onChange={onChange1}
+                      name="thumbnail"
+                      value={thumbnail}
+                      type="file"
+                      className="form-control"
+                      id="exampleFormControlInput2"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1 font-bold">
+                      Content
+                    </label>
+                    <textarea
+                      onChange={onChange}
+                      name="description"
+                      value={description}
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Add
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
       <Footer />

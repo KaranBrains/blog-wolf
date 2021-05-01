@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "../../Navbar/Navbar";
+import Navbar from "../../HomeNavbar/Navbar/Navbar";
 import swal from "sweetalert";
 
 function Signup() {
@@ -37,6 +37,7 @@ function Signup() {
   return (
     <>
       <Navbar />
+
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">

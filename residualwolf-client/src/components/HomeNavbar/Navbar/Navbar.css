@@ -1,0 +1,34 @@
+.navbar-toggler {
+  padding: 0 !important;
+  font-size: 1.25rem;
+  line-height: 2;
+  background-color: white;
+  border: none !important;
+  position: fixed;
+}
+
+.logo {
+  background-color: var(--primaryColor);
+}
+
+.links {
+  margin-left: 45%;
+}
+
+.nav-background {
+  background-color: white;
+  width: 100%;
+}
+.dropdown-menu {
+  padding-top: 0px !important ;
+  padding-bottom: 0px !important;
+  border: none;
+}
+.mobile-visible {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .mobile-visible {
+    display: block;
+  }
+}

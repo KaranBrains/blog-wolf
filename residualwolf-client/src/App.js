@@ -2,8 +2,6 @@ import React, { Fragment } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import NavbarComponent from "./components/Navbar/Navbar";
-import Footer from './components/Footer/Footer';
 import Blog from './components/layouts/BlogSection';
 import BlogDetails from './components/layouts/SingleBlog';
 import Home from './components/layouts/Home';
@@ -21,7 +19,6 @@ const App = () => {
   return (
     <State>
       <Router>
-        {/* <NavbarComponent /> */}
         <Fragment>
           <div className="container-fluid">
             <Switch>
@@ -38,8 +35,7 @@ const App = () => {
               <Route exact path="/dashboard/user" component={User} />
             </Switch>
           </div>
-        </Fragment>
-        {/* <Footer className="bg-secondaryColor" /> */}
+        </Fragment>        
       </Router>
     </State>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
-import Navbar from "../../Navbar/Navbar";
+import Navbar from "../../HomeNavbar/Navbar/Navbar";
 import axios from "axios";
 import swal from "sweetalert";
 
